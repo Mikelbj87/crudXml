@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ejemplo de HTML5">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="shortcut icon" href="./imagenes/empresas.png">
+  <title>Plantilla</title>
+  <link rel="stylesheet" href="./css/plantilla.css">
+  <script src="datos.js"></script>
+  <script src="./js/notificaciones.js"></script>
+  <script src="./js/funciones.js"></script>
+  <!--  TABLA DATOS    https://frappe.io/datatable/docs     -->
+  <link href="https://unpkg.com/frappe-datatable@0.0.5/dist/frappe-datatable.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/sortablejs@1.7.0/Sortable.min.js"></script>
+  <script src="https://unpkg.com/clusterize.js@0.18.0/clusterize.min.js"></script>
+  <!-- include the lib -->
+  <script src="https://unpkg.com/frappe-datatable@0.0.5/dist/frappe-datatable.min.js"></script>
+  <!-- initialize DataTable -->
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeNRBEIWYeWRRvY8On_9pkSD1_J_zLykQ&libraries=geometry">
+    </script>
+    <!--AIzaSyCRVFFEndQ4rF96y-RMaHx9sexqvpZo_lo-->
+</head>
+
+<body>
+  <div id="contenedor">
+    <header id="cabecera">
+      <img id="imagenTitulo" src="imagenes/empresas.jpg" width="300px" height="150px">
+      <h1 id="titulo">Gestion de Empresas de Aranda</h1>
+    </header>
+    <nav id="menu">
+      <input type="checkbox" id="menuopciones">
+      <label for="menuopciones"> ☰ </label>
+      <ul>
+        <li id="bGrabar">Nuevo</li>
+        <li id="bModificar">Modificar</li>
+        <li id="bBorrar">Borrar</li>
+        <li id="bSiguiente">Siguiente</li>
+        <li id="bAnterior">Anterior</li>
+        <li id="bTabla">Tabla</li>
+      </ul>
+    </nav>
+    <section id="seccion">
+      <article>
+        <header>
+          <hgroup>
+            <h1>Registro de Empresa</h1>
+            <div style="position: relative; left: 0px; width:100%; top:  10px; height: 380px;z-index: 2"
+              class="map_canvas" id="map_canvas">
+            </div>
+            </br>
+          </hgroup>
+        </header>
+
+        <body>
+          <table style="width: 100%">
+            <tr>
+              <td style="width: 146px">Nombre Empresa</td>
+              <td>
+                <input id="iNombre" type="text" style="width: 257px" value="" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 146px; height: 26px;">Telefono</td>
+              <td style="height: 26px">
+                <input id="Telefono" type="text" style="width: 377px" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 146px">Direccion Empresa&nbsp;</td>
+              <td>
+                <input id="Direccion" name="Direccion" type="text" style="width: 241px; height: 19px;" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 146px">Localidad</td>
+              <td>
+                <input id="Localidad" type="text" style="width: 155px" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 146px">Latitud/Longitud</td>
+              <td>
+                <input id="latitud_longitud" type="text" style="width: 158px" name="latitud_longitud" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 146px">&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </body>
+        <footer>
+          <p>comentarios (0)</p>
+        </footer>
+      </article>
+      <article>
+        <header>
+          <hgroup>
+            <h1>Tabla Articulos</h1>
+        </header>
+        <div id="datatable"></div>
+      </article>
+    </section>
+    <aside id="columna">
+      <h2>Aranda de Duero</h2>
+    </br>
+      <p>
+        Aranda de Duero es un municipio y ciudad española del sur de la provincia de Burgos, en Castilla y León.
+        Pertenece al partido judicial de Aranda de Duero. Cuenta con una población de 33.187 habitantes (2020),1​ siendo
+        el tercer municipio no capital de provincia más poblado de la comunidad autónoma.
+        Históricamente es conocida por haberse celebrado en 1473 el Concilio de Aranda, con presencia de la todavía
+        princesa Isabel I de Castilla. También por el plano de Aranda, realizado en 1503, siendo el mapa urbano más
+        antiguo del país y el documento cartográfico más antiguo del Archivo General de Simancas, en el cual se basaron
+        para el desarrollo de las ciudades del Nuevo Mundo recién descubierto por la Corona de Castilla. Por Aranda
+        además cruza la Cañada Real Segoviana, desde 2007, incluida en la lista indicativa de la Unesco, como futura
+        candidatura a Patrimonio de la Humanidad.
+      </p>
+      </br>
+      <div style="position: relative; left: 0px; width:100%; top:  10px; height: 380px;z-index: 2" class="map_canvas"
+        id="map_canvas">
+      </div>
+    </aside>
+    <footer id="pie">
+      Desarrollo de Aplicaciones Web(DAW) © CIFP Santa Catalina
+    </footer>
+  </div>
+</body>
+</html>
